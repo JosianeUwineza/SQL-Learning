@@ -38,9 +38,24 @@ Example:
 (9, 'WALL-E', 'Andrew Staton', 2008, 104),
 (10, 'Up', 'Pete Docter', 2009, 101);
 `
+
 ### Key note
 * Always add the semi columns `;` at the end of each command
 * Always the commas `,` separate values
 * `-# `or `(#` symbolize a continuation of command line
 * `=#` this is showing that no command line is running
-* If there is something line `'#` it showing that there is an error 
+* If there is something line `'#` it showing that there is an error
+  
+# SECOND DAY
+##  SECT Query 
+In this we ran to select all columns from table using `SELECT, FROM` command.
+### Examples
+1. Find title of each film?
+* Answer:
+`SELECT title FROM movies;`
+2. Find derector of each film?
+* Answer: `SELECT director FROM movies;`
+3. Find title and year if each film?
+* Answer: `SECECT title, year FROM movies; `
+4. Find all the information if each film?
+* Answer: `SELECT * FROM movies;`
