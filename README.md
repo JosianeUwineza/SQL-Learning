@@ -80,12 +80,8 @@ WHERE Condition
 | NOT IN (…) |  	Number does not exist in a list |  col_name NOT IN (1, 3, 5)|
 
 ### Examples
-1. Find the movie with a row id of 6
-`SELECT tilte FROM movies WHERE Id=6;` 
-2. Find the movies released in the year(s) between 2000 and 2010
-` SELECT title , year FROM movies WHERE year BETWEEN 2000 AND 2010; `
-3. Find movies not realesed in the year(s) between 2000 and 2010
-`SELECT title, year FROM movies WHERE NOT BETWEEN 2000 AND 2010;`
-4.  Find the first 5 Pixar movies and their release year
-   ` SELECT Id, title, year FROM movies WHERE Id <= 5
+1. Find the movie with a row id of 6: `SELECT tilte FROM movies WHERE Id=6;` 
+2. Find the movies released in the year(s) between 2000 and 2010: ` SELECT title , year FROM movies WHERE year BETWEEN 2000 AND 2010; `
+3. Find movies not realesed in the year(s) between 2000 and 2010: `SELECT title, year FROM movies WHERE NOT BETWEEN 2000 AND 2010;`
+4.  Find the first 5 Pixar movies and their release year:   `SELECT Id, title, year FROM movies WHERE Id <= 5; `
 
