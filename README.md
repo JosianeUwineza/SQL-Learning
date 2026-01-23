@@ -94,3 +94,24 @@ WHERE Condition
 | NOT LIKE| Case insensitive exact string inequality | col_name NOT LIKE "ABCD"|
 | % | Use anywhere in a string to match a squence of zero or more characters (only with LIKE or NOT LIKE| col_name LIKE "%AT%" This to mean look any string with "AT" character anywhere|
 | _ |  	Used anywhere in a string to match a single character (only with LIKE or NOT LIKE | col_name LIKE "AN_" (matches "AND", but not "AN")|
+| IN(...) |  	String exists in a list | col_name IN ("A", "B", "C")
+| NOT IN (....) |  String does not exists in a list |  	col_name NOT IN ("D", "E", "F") |
+
+### Examples 
+1. Find all the Toy Story movies
+` SELECT title FROM movies 
+WHERE title LIKE '%Toy Story%'; `
+
+2. Find all the movies directed by John Lasseter
+` SELECT title, director FROM movies
+WHERE director = 'John Lasseter' ;`
+
+4. Find all the movies (and director) not directed by John Lasseter
+` SELECT title , director FROM movies
+WHERE director != 'John Lasseter'; `
+
+5. Find all the WALL-* movies
+` SELECT * FROM movies
+WHERE title LIKE 'WALL-_' ;`
+
+   
