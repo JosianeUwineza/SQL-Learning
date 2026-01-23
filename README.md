@@ -84,4 +84,13 @@ WHERE Condition
 2. Find the movies released in the year(s) between 2000 and 2010: ` SELECT title , year FROM movies WHERE year BETWEEN 2000 AND 2010; `
 3. Find movies not realesed in the year(s) between 2000 and 2010: `SELECT title, year FROM movies WHERE NOT BETWEEN 2000 AND 2010;`
 4.  Find the first 5 Pixar movies and their release year:   `SELECT Id, title, year FROM movies WHERE Id <= 5; `
+### Other useful operators with columns containing string data
 
+| Operator| Condition| SQL Example|
+|---------|----------|------------|
+| =    |Case sensitive exact string comparison (notice single equals) | col_name ='abc'|
+|!= or <> | Case sensitive exact string enequality comparison | col_name ! = 'abcd' |
+| LIKE| Case insensitive exact string comparison | col_name Like "ABC" this means (it includes 'abc', 'Abc, ..|
+| NOT LIKE| Case insensitive exact string inequality | col_name NOT LIKE "ABCD"|
+| % | Use anywhere in a string to match a squence of zero or more characters (only with LIKE or NOT LIKE| col_name LIKE "%AT%" This to mean look any string with "AT" character anywhere|
+| _ |  	Used anywhere in a string to match a single character (only with LIKE or NOT LIKE | col_name LIKE "AN_" (matches "AND", but not "AN")|
