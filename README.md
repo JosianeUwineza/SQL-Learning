@@ -113,5 +113,22 @@ WHERE director != 'John Lasseter'; `
 5. Find all the WALL-* movies
 ` SELECT * FROM movies
 WHERE title LIKE 'WALL-_' ;`
+#  THIRD DAY
+###  Filtering and sorting Query results 
+* **DISTINCT** : It is used get unique rows in a specified column or columns, but this remove the entire 
+* **ORDER BY** : It used to sort your results based on specified column name either in Ascending order (ASC) or Descending order (DSC)
+* **LIMIT** : It is used to restrict number of rows (give me this number of rows)
+* **OFFSET** : skip rows (pagination) (“Skip the first N rows”)
+### Examples
+* `SSELECT DISTINCT director FROM movies ORDERED BY director ASC ;`
+* `SELECT title, year FROM movies
+ORDER BY year DESC
+LIMIT 4;`
+* `SELECT title, year FROM movies
+ORDER BY year ASC
+LIMIT 5; `
+* `SELECT title FROM movies
+ORDER BY title ASC
+LIMIT 5 OFFSET 5;`
 
    
