@@ -11,7 +11,7 @@ I will be using the PostgreSQL as tools for SQL
 * Example:
 `CREATE DATABASE pixar_classic_movies`
 ### Entering in Database
-` \c database name`
+` psql & \c database name`
 * Example: ` \c pixar_classic_movies `
 ### Once in Database, Create a Table
 `CREATE TABLE Name of the table( columns names of table)`
