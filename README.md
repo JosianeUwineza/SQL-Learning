@@ -168,4 +168,23 @@ INNER JOIN boxoffice b
 ON m.id=b.movie_id 
 WHERE b.international_sales > b.domestic_sales;
 ```
-   
+### LEFT JOIN
+It show **ALL** rows from the LEFT table, and matching rows from the RIGHT table.If there is no match **show NULL**.
+**Example**
+```
+SELECT b.building_name, e.role FROM buidildings b
+LEFT JOIN employees e
+ON b.buidling_name = e.building;
+```
+### RIGHT JOIN
+Show ALL rows from the RIGHT table, and matching rows from the LEFT table.
+### FULL JOIN
+Show ALL rows from BOTH tables, whether they match or not.
+
+### JOIN types comparison (must-know table)
+| JOIN TYPE  | Results(what you Get)|
+|------------|----------------------|
+|INNER JOIN  | Only matching rows   |
+|LEFT JOIN   | All left + matches   |
+| RIGTH JOIN | All right + matches  |
+| FULL JOIN  | Everything           |
