@@ -188,3 +188,15 @@ Show ALL rows from BOTH tables, whether they match or not.
 |LEFT JOIN   | All left + matches   |
 | RIGTH JOIN | All right + matches  |
 | FULL JOIN  | Everything           |
+
+##  A short note on NULLs 
+* NULL means **no value** / **unknown** / **missing**
+* It does NOT mean: **0** or **empty string ''** or **FALSE**
+* NULL = we don’t know the value or it does not exist
+
+### Why NULLs need special attention
+Because NULL behaves differently from normal values.
+* for example we can't say:
+    `Salary = NULL` or `Salary != NULL`
+* Instead:
+` Salary IS NULL` or ` SALARY IS NOT NULL`
