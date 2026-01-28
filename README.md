@@ -131,4 +131,40 @@ LIMIT 5; `
 ORDER BY title ASC
 LIMIT 5 OFFSET 5;`
 
+# Fourth Day
+## Multi-table queries with JOINs
+### INNER JOIN 
+INNER JOIN returns only the rows that exist in both tables. If there is no match, the row is not shown.
+* **Usage**
+```
+  SELECT column, another_table_column, …
+FROM mytable
+INNER JOIN another_table 
+    ON mytable.id = another_table.id
+WHERE condition(s)
+ORDER BY column, … ASC/DESC
+LIMIT num_limit OFFSET num_offset;
+```
+* **Examples**
+1.
+```
+SELECT m.title, b.domestic_sales, b.international_sales FROM movies m
+INNER JOIN boxoffice b
+ON m.id=b.movie_id
+;
+```
+2. 
+```
+SELECT m.title, b.rating FROM movies m
+INNER JOIN boxoffice b
+ON m.id=b.movie_id 
+ORDER BY b.rating DESC; 
+```
+3.
+```
+SELECT m.title, b.domestic_sales, b.international_sales FROM movies m 
+INNER JOIN boxoffice b
+ON m.id=b.movie_id 
+WHERE b.international_sales > b.domestic_sales;
+```
    
