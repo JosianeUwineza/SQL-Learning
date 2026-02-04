@@ -240,4 +240,9 @@ SQL aggregate Functions allow to summarize data accross multiple rows, such as c
 FROM mytable
 WHERE constraint_expression
 GROUP BY column;`
-
+### Examples
+1. `SELECT building, SUM(years_employed) as Total_years_employed
+FROM employees
+GROUP BY building;`
+2. `SELECT MAX(years_employed) as Max_years_employed
+FROM employees;`
