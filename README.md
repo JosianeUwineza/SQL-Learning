@@ -201,7 +201,7 @@ Because NULL behaves differently from normal values.
 * Instead:
 ` Salary IS NULL` or ` SALARY IS NOT NULL`
 
-# Fourth Day
+# FIFTH Day
 ## Queries with Expressions in SQL
 SQL allows the use of expressions to apply calculations and transformations to column values directly with in a query. These expressions can include arithmetic operations, mathematic functions, and string or data functions , depending on database.
 * Key points:
@@ -218,7 +218,7 @@ WHERE year % 2 = 0;`
 FROM movies
   JOIN boxoffice
     ON movies.id = boxoffice.movie_id;`
-# FIFTH DAY
+# SIXTH DAY
 ## QUERY WITH AGGREGATE FUUNCTIONS
 SQL aggregate Functions allow to summarize data accross multiple rows, such as counting records or computing minimum, maiximum, average, or total values. When no grouping specified, aggregates operate on the entire result set and return a single value.
 |**Common aggregate Functions** | **Description** |
@@ -246,3 +246,18 @@ FROM employees
 GROUP BY building;`
 2. `SELECT MAX(years_employed) as Max_years_employed
 FROM employees;`
+## SQL Queries with Aggregates: **HAVING**
+When using aggragate functions with `**GROUP BY**` filtering individual rows is done with `**WHERE**`, but filtering grouped results the `**HAVING**` clause.
+* **Keypoints**:
+     * `WHERE` filters rows before grouping.
+     * `GROUP BY` groups rows based on one or more columns.
+     * `HAVING` filters the aggregated groups after grouping.
+     * `HAVING` uses the same condition sysntax as `WHERE`, but it works with aggregate results.
+*  This is how Query look like:
+`SELECT group_by_column,
+       AGG_FUNC(column) AS aggregate_result
+FROM mytable
+WHERE condition
+GROUP BY group_by_column
+HAVING group_condition;
+`       
