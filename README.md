@@ -228,5 +228,16 @@ SQL aggregate Functions allow to summarize data accross multiple rows, such as c
 | MAX(column) | Largest value of a colum|
 |AVG(colum)| Average value|
 | SUM(column)| Total value|
+`
+* Note that aggregates can be applied to the groups of rows using `** GROUP BY ** ` clause. This Produces on result per unique group (e.g statistics per category or year)
+* **Key Notes**:
+     * Use aliases (AS) to make aggregate results readable
+     * Without **GROUP BY**, aggregates summarize the entire dataset.
+     * With ** GROUP BY**, aggregates summarize each group separately.
 
+* This is how Query look like:
+`SELECT AGG_FUNC(column_or_expression) AS aggregate_description, …
+FROM mytable
+WHERE constraint_expression
+GROUP BY column;`
 
