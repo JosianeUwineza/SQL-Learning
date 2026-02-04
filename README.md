@@ -9,7 +9,7 @@ I will be using the PostgreSQL as tools for SQL
 ### Create a Database
 ` CREATE DATABASE name of database`
 * Example:
-`CREATE DATABASE pixar_classic_movies`
+`CREATE DATABASE pixar_classic_movies;`
 ### Entering in Database
 ` psql & \c database name`
 * Example: ` \c pixar_classic_movies `
@@ -200,3 +200,22 @@ Because NULL behaves differently from normal values.
     `Salary = NULL` or `Salary != NULL`
 * Instead:
 ` Salary IS NULL` or ` SALARY IS NOT NULL`
+
+# Fourth Day
+## Queries with Expressions in SQL
+SQL allows the use of expressions to apply calculations and transformations to column values directly with in a query. These expressions can include arithmetic operations, mathematic functions, and string or data functions , depending on database.
+* Key points:
+     * Expressions can be used in SELECT, WHERE, and other clauses.
+     * Use aliases (AS) to make computed columns easier to understand.
+     * Aliases also can be applied to column names and tables to simplify complex queries, espicially when using joins.
+     * While expressions are powerful, overusing them ca reduce query readability so clear aliases are recommended
+
+### Examples
+* `SELECT title, year
+FROM movies
+WHERE year % 2 = 0;`
+* `SELECT title, (domestic_sales + international_sales) / 1000000 AS gross_sales_millions
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id;`
+
