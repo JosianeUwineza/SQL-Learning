@@ -218,4 +218,15 @@ WHERE year % 2 = 0;`
 FROM movies
   JOIN boxoffice
     ON movies.id = boxoffice.movie_id;`
+# FIFTH DAY
+## QUERY WITH AGGREGATE FUUNCTIONS
+SQL aggregate Functions allow to summarize data accross multiple rows, such as counting records or computing minimum, maiximum, average, or total values. When no grouping specified, aggregates operate on the entire result set and return a single value.
+|**Common aggregate Functions** | **Description** |
+|-------------------------------|-----------------|
+| COUNT(*) or COUNT(column)     | Count rows (or Non NULLS) values in a column|
+|MIN(column)  | Smallest value of a column|
+| MAX(column) | Largest value of a colum|
+|AVG(colum)| Average value|
+| SUM(column)| Total value|
+
 
