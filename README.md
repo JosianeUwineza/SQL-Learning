@@ -260,4 +260,8 @@ FROM mytable
 WHERE condition
 GROUP BY group_by_column
 HAVING group_condition;
-`       
+`
+### Examples
+* `SELECT role, SUM(years_employed)as total_year FROM employees
+GROUP BY role
+HAVING role = 'Engineer';`
