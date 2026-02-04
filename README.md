@@ -265,3 +265,15 @@ HAVING group_condition;
 * `SELECT role, SUM(years_employed)as total_year FROM employees
 GROUP BY role
 HAVING role = 'Engineer';`
+# SEVENTH DAY
+## ORDER OF EXECUTION OF A SQL Query
+A SQL `SELECT` query is executed in specific order, which is different from how the query is Written. Understanding this order helps explain why some columns or aliases are not available in certain clauses.
+* **Execution Order**:
+    * `FROM/JOIN`: Build the initial working dataset by combining tables.
+    * `WHERE`: Filter individual rows based on conditions.
+    * `GROUP BY`: Group remaining rows by one or more columns.
+    * `HAVING`: Filter grouped rows based on aggrated conditions.
+    * `SELECT`: Compute expressions and select output columns.
+    * `DISTINCT`: Remove duplicate rows from the result.
+    * `ORDER BY`: Sort all results (aliases are allowed here)
+    * `LIMIT/OFFSET`: Restrict the number of rows returned
