@@ -277,3 +277,13 @@ A SQL `SELECT` query is executed in specific order, which is different from how 
     * `DISTINCT`: Remove duplicate rows from the result.
     * `ORDER BY`: Sort all results (aliases are allowed here)
     * `LIMIT/OFFSET`: Restrict the number of rows returned
+ 
+### Examples
+* `SELECT director , COUNT(*)as movies_number FROM movies
+GROUP BY director;`
+
+* ` SELECT director, SUM(domestic_sales + international_sales)as total_sales
+FROM movies
+JOIN Boxoffice
+ON movies.id = boxoffice.movie_id
+GROUP BY director;`
