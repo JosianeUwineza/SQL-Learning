@@ -320,3 +320,19 @@ An **UPDATE** query is used to modify existing rows in a table. It does not add 
   * WHERE condition
        * Very important ❗
        * Tells SQL which rows should be updated. Only rows that match this condition will change.
+
+### Examples
+* `
+ UPDATE movies
+ SET director = 'John Lasseter'
+ WHERE title = 'A Bug''s Life'`
+
+* `UPDATE movies
+SET year = 1999
+WHERE title = 'Toy Story 2'`
+* `UPDATE movies
+SET title = 'Toy Story 3',
+    director = 'Lee Unkrich'
+    WHERE title = 'Toy Story 8'`
+
+
