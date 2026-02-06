@@ -289,7 +289,7 @@ ON movies.id = boxoffice.movie_id
 GROUP BY director;`
 
 # SEVENTH DAY
-## INSERTING ROWS
+## INSERT QUERY
 A database **Schema`` defines the structure of a table including its Columns and their data types. This fixed structure ensures data consistency and efficiency. New data is added to a table using the `INSERT INTO` statement. Rows can be inserted by providing values for all columns in order, or by explicitly only certain columns, which is safer and more flexible when tables change.
 
 Multiple rows can be inserted in a single statement, and expressions (such as arithmetic or string operations) can be used when inserting values to ensure proper formatting or calculations.
@@ -301,3 +301,22 @@ Multiple rows can be inserted in a single statement, and expressions (such as ar
 
 ### Examples
 * `INSERT INTO boxoffice VALUES(15, 8.7, 340000000, 270000000);`
+
+## UPDATE QUERY
+An **UPDATE** query is used to modify existing rows in a table. It does not add new rows (that's INSERT), and it does not remove rows (That's DELETE).
+* Basic structure
+  ```
+  UPDATE mytable
+  SET Column_name = Value_or_expression,
+      other_column = another_value_or_expression
+  WHERE condition;
+  ```
+* This basic structure can be explained like:
+    
+  * UPDATE mytable: Tells SQL which table you want to change.
+  * SET column = value: Specifies which columns to update and what new values they should get. You can update one or many columns at the same time.
+    `SET salary = 5000,
+    title = 'Senior Engineer'`
+  * WHERE condition
+       * Very important ❗
+       * Tells SQL which rows should be updated. Only rows that match this condition will change.
