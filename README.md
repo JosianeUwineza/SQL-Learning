@@ -287,3 +287,17 @@ FROM movies
 JOIN Boxoffice
 ON movies.id = boxoffice.movie_id
 GROUP BY director;`
+
+# SEVENTH DAY
+## INSERTING ROWS
+A database **Schema`` defines the structure of a table including its Columns and their data types. This fixed structure ensures data consistency and efficiency. New data is added to a table using the `INSERT INTO` statement. Rows can be inserted by providing values for all columns in order, or by explicitly only certain columns, which is safer and more flexible when tables change.
+
+Multiple rows can be inserted in a single statement, and expressions (such as arithmetic or string operations) can be used when inserting values to ensure proper formatting or calculations.
+* **KEY POINTS** :
+      * Schemas define table structure and data types.
+      * **INSERT INTO** add one or more rows to a table.
+      * Specifying columns makes insert more robust and future proof
+      * Expressions can be used during insertion of data transformation
+
+### Examples
+* `INSERT INTO boxoffice VALUES(15, 8.7, 340000000, 270000000);`
