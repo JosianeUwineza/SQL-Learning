@@ -334,5 +334,15 @@ WHERE title = 'Toy Story 2'`
 SET title = 'Toy Story 3',
     director = 'Lee Unkrich'
     WHERE title = 'Toy Story 8'`
-
+  
+## DELETE QUERY
+To remove data from a table, SQL use the **DELEETE** query. It deletes rows that match a specified condition in **WHERE* Clause.
+* Basic Structure
+` DELETE FROM my table
+WHERE condition`
+* **Safety tips:**
+   * Always test the ** WHERE ** condition with **SELECT** query before deleting.
+   * **DELETE** operations are irreversible without backups.
+   * Review **DELETE** statements carefully to avoid accidental data loss.
+     
 
