@@ -344,5 +344,11 @@ WHERE condition`
    * Always test the ** WHERE ** condition with **SELECT** query before deleting.
    * **DELETE** operations are irreversible without backups.
    * Review **DELETE** statements carefully to avoid accidental data loss.
-     
+ 
+### Examples
+* `DELETE FROM movies
+WHERE year < 2005;`
+
+* `DELETE FROM movies
+WHERE director = 'Andrew Stanton';`
 
