@@ -352,3 +352,6 @@ WHERE year < 2005;`
 * `DELETE FROM movies
 WHERE director = 'Andrew Stanton';`
 
+# DAY NINTH
+## CREATING TABLES IN SQL
+New tables are created in SQL using the **`CREATE TABLE`** Statement. A table's structure is defined by its Schema which specifies the columns, data types, optional contrainsts. and default values.
