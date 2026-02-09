@@ -355,3 +355,39 @@ WHERE director = 'Andrew Stanton';`
 # DAY NINTH
 ## CREATING TABLES IN SQL
 New tables are created in SQL using the **`CREATE TABLE`** Statement. A table's structure is defined by its Schema which specifies the columns, data types, optional contrainsts. and default values.
+* **Basic structure**;
+` CREATE TABLE IF NOT EXISTS mytable(
+column DataType CONSTRAINT DEFAULT value,
+another_column  DataType CONSTRAINT DEFAULT value`
+### Common Data Types
+SQL supports various data types, which may vary slightly between databases:
+|Common Table Data Types | Description  |
+|------------------------|--------------|
+| INTEGER , BOOLEAN      | Store a whole numbers or true/false values |
+| FLOAT, DOUBLE, REAL    | Store decimal and precise numeric values   |
+|CHAR, VARCHAR, TEXT     | Store string and text|
+|DATE, DATETIME          | store date and timestamps |
+| BLOB                   | Store binary data such as images or files|
+
+### CONSTRAINTS TYPES
+Coonstrains enfore data integrity by restricting what values can be inserted into columns:
+| Contraints Types |  Desriptions |
+|------------------| --------------|
+| PRIMARY KEY  | Uniquely identify each row |
+|AUTOINCREMENT | Automatically increments integer values ( database-dependent) |
+| UNIQUE       |  prevent duplicate values  in column |
+| NOT NULL | Disallows NULL values |
+| CHECK | Applies custom  validation rules |
+| FOREIGN KEY| Ensures referential integrity between tables |
+
+### EXAMPLES
+`CREATE TABLE IF NOT EXISTS Database (
+Name TEXT,
+Version FLOAT,
+Download_count INT
+);`
+
+
+
+
+
