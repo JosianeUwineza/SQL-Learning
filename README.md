@@ -399,6 +399,18 @@ ADD Aspect_ratio FLOAT;`
 * `ALTER TABLE movies
 ADD Language TEXT DEFAULT English;`
 
+## DROP TABLE QUERY
+The `DROP TABLE` Statement permanently remove table from database including data and schema. Unlike `DELETE` which only removes row. `DROP TABLE` delete entire table definition
+* **Basic Structure**: `DROP TABLE IF EXISTS mytable`. Using IF EXISTS prevents errors if the table does not exist.
+
+* Tables with foreing key dependency cannot be dropped until depend tables or constraint are removed 
+* **Note**: Use the cautions as this action is not irrervisible without backups.
+
+### Examples
+* `DROP TABLE IF EXISTS movies;`
+
+* DROP TABLE IF EXISTS boxoffice;
+
 
 
 
