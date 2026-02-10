@@ -388,7 +388,10 @@ Download_count INT
 );`
 
 ## ALTER TABLE QUERY
-
+ As data requirements evolves, SQL allows you to modify existing tables structures using existing `ALTER TABLE` Statement. This include adding, removing, or renaming columns as well as renaming table.
+ * **Basic structure to add new column**: ` ALTER TABLE mytable ADD column Datatypes DEFAULT default_value;`
+ * **Basic structure to delete column**:  ` ALTER TABLE mytable DROP column;`
+ *  **Basic structure to rename table**:  ` ALTER TABLE mytable RENAME TO new_table;`
 ### Examples
 * ALTER TABLE movies
 ADD Aspect_ratio FLOAT;`
