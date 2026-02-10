@@ -387,6 +387,15 @@ Version FLOAT,
 Download_count INT
 );`
 
+## ALTER TABLE QUERY
+
+### Examples
+* ALTER TABLE movies
+ADD Aspect_ratio FLOAT;`
+
+* `ALTER TABLE movies
+ADD Language TEXT DEFAULT English;`
+
 
 
 
